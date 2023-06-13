@@ -37,4 +37,13 @@ app.get("/read-blog/:id",async(req, res) => {
     console.log(item);
     res.render('read_blogs',{item})
 })
+app.post("/delete-blog/:id",async (req, res) => {
+    const { id } = req.params;
+    const deleteitem=await Blog.findByIdAndDelete(id);
+    if (!deleteitem) {
+        console.log('Item not deleted');
+    }
+    console.log('Item deleted');
+    res.redirect("/show-blogs")
+})
 app.listen(port, () => { console.log('Server is running at port 3000') });
