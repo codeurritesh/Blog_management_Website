@@ -8,6 +8,9 @@ mongoose.connect("mongodb://riteshponty:VcCujxKVZPImncPV@ac-aztryrz-shard-00-00.
 }).catch((err) => {
     console.log(err);
 })
+app.get("/", (req, res) => {
+    res.redirect("/add-blog")
+})
 app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'Public')));
 app.use(express.urlencoded({ extended: true }));
