@@ -1,3 +1,3 @@
 ﻿# Blog_management_Website
 
-Blog management website buildup in the duration of bharat intren
+This is the blog management website which is the first task of bharat internship.
